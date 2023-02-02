@@ -4,7 +4,7 @@ import Header from "./Components/Header/Header";
 function App() {
   return (
     <div className="App">
-    <Header name={"Nome"} surname={"Sobrenome"} classes={"Classe"}></Header>
+    <Header name={"The"} surname={"Oliveira"} classes={"barbarian"}></Header>
     </div>
   );
 }

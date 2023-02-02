@@ -1,0 +1,29 @@
+.Hp{
+    color:red;
+}
+
+.Hp input{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 35px;
+    display: inline-block;
+    color:red;
+    font: inherit;
+    text-align: right;
+}
+
+.Sp{
+    color:blue;
+}
+
+.Sp input{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 35px;
+    display: inline-block;
+    color:blue;
+    font: inherit;
+    text-align: right;
+}

@@ -1,20 +1,28 @@
 .Wrapper{
-    border: 2px solid #000;
+    border: 2px solid #ece6e6;
+    color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 0 20px;
-    height: 100px;
-    background-color: #fff;
-}
-
-.Name{
-    text-decoration: underline;
+    height: 120px;
+    width: 100vw;
     font-size: 20px;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    color: #000;
 }
 
+.Name {
+    flex-grow: 5;
+    width:60%;
+}
 .Classes{
-
+    flex-grow: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+.Image{
+    margin-left:10px;
 }
