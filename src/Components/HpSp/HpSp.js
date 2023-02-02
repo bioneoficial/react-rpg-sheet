@@ -5,21 +5,14 @@ const HpSp = (props) => {
     const [currentHp, setCurrentHp] = useState(props.hp || 100)
     const [currentSp, setCurrentSp] = useState(props.sp || 100)
 
-    const handleHpChange = (e) => {
+    const handleChange = (e, type) => {
         const value = Number(e.target.value);
-        if (!isNaN(value) && value >= 0 && value <= props.hp) {
-            setCurrentHp(value);
-        }else if (value < 10){
-            setCurrentHp(0);
-        }
-    };
+        let setCurrentValue = type === 'hp' ? setCurrentHp : setCurrentSp;
 
-    const handleSpChange = (e) => {
-        const value = Number(e.target.value);
-        if (!isNaN(value) && value >= 0 && value <= props.sp) {
-            setCurrentSp(value);
-        }else if (value < 10){
-            setCurrentSp(0);
+        if (!isNaN(value) && value >= 0 && value <= props[type]) {
+            setCurrentValue(value);
+        }else if (value < 10){ // if the value is less than 10, it will be considered a single digit number and will be set to 0
+            setCurrentValue(0);
         }
     };
 
@@ -32,7 +25,7 @@ const HpSp = (props) => {
             inputMode="numeric"
             maxLength={3}
             value={currentHp}
-            onChange={handleHpChange}/>
+            onChange={(e)=> handleChange(e,'hp' )}/>
             /{props.hp}
         </span>
         <span className={"Sp"}>
@@ -42,7 +35,7 @@ const HpSp = (props) => {
                 inputMode="numeric"
                 maxLength={3}
                 value={currentSp}
-                onChange={handleSpChange}/>
+                onChange={(e)=> handleChange(e,'sp' )}/>
             /{props.sp}
         </span>
         </div>
