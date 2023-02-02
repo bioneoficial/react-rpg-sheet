@@ -7,7 +7,7 @@ const HpSp = (props) => {
 
     const handleChange = (e, type) => {
         const value = Number(e.target.value);
-        let setCurrentValue = type === 'hp' ? setCurrentHp : setCurrentSp;
+        const setCurrentValue = type === 'hp' ? setCurrentHp : setCurrentSp;
 
         if (!isNaN(value) && value >= 0 && value <= props[type]) {
             setCurrentValue(value);

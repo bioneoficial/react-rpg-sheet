@@ -13,6 +13,7 @@ import sorcerer from '../../Assets/Images/sorcerer.jpeg'
 import warlock from '../../Assets/Images/warlock.jpeg'
 import wizard from '../../Assets/Images/wizard.jpeg'
 import HpSp from "../HpSp/HpSp";
+import LevelXp from "../LevelXp/LevelXp";
 const Header = (props) =>
 {
     const images = {artificer, barbarian, bard, cleric, druid, fighter, monk, paladin, ranger, rogue, sorcerer, warlock, wizard};
@@ -21,6 +22,7 @@ const Header = (props) =>
         <div className={"Wrapper"}>
             <span className={"Name"}>Name: {props.name} {props.surname}</span>
             <HpSp hp={100} sp={300}></HpSp>
+            <LevelXp level={1} xp={0}></LevelXp>
             <span className={"Classes"}>Class: {className} <img className={"Image"} src={images[props.classes.toLowerCase()]} alt={props.classes}/> </span>
         </div>
     )
